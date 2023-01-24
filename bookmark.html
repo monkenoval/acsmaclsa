@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Classes</title>
+        <link rel="icon" type="image/x-icon" href="/assets/classroom.png"/>
+        <link rel="stylesheet" href="ui.css"/>
+    </head>
+    <body>
+        <div class="main-alt">
+            <a href="launcher.html" class="ui-x circle">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffc0cb" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg> 
+            </a>
+            <h1>Bookmarklets</h1>
+            <p>How to add: Find a bookmarklet on this page that you would like to use, click to open the section, highlight and copy the bookmarklet (located under the section that has the title and description). Add a new bookmark and then right click on it, click edit and then paste your bookmarklet into where into where it says URL. If you followed the steps correctly then you can now click the bookmarklet that's in your bookmark bar and it'll work.</p>
+            <h2>Autoclicker</h2>
+            <p>javascript:(function() { var clickerIsMouseDown = false; var clickerCurrentMouseTarget = document.body; document.body.addEventListener('mouseup', () => { clickerIsMouseDown = false; }); document.body.addEventListener('mousedown', () => { clickerIsMouseDown = true; }); document.body.addEventListener('mousemove', (e) => { clickerCurrentMouseTarget = e.target }); setInterval(() => { if (clickerIsMouseDown) clickerCurrentMouseTarget.click(); }, 0); })();</p>
+            <h2>Ingot/LTBEEF (Extension Disabler, Patched ChromeOS 106+)</h2>
+            <p>javascript:(function () {var a = document.createElement('script');a.src = 'https://cdn.jsdelivr.net/gh/FogNetwork/Ingot@latest/ingot.min.js';document.body.appendChild(a);}())</p>
+            <h2>YT Ad Skip</h2>
+            <p>javascript:if(document.getElementsByClassName("video-ads")[0].innerHTML !==""){ var banner = false; for(var i = 0; i < document.getElementsByClassName("ytp-ad-overlay-close-button").length; i++){ document.getElementsByClassName("ytp-ad-overlay-close-button")[i].click(); banner = true;} if(banner === false){ document.getElementsByClassName("html5-main-video")[0].currentTime = document.getElementsByClassName("html5-main-video")[0].duration; document.getElementsByClassName("ytp-ad-skip-button")[0].click();} }void 0;</p>
+        </div>
+    </body>
+</html>
